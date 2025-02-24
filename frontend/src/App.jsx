@@ -1,6 +1,8 @@
 import Navbar from "./components/Navbar";
 
 import HomePage from "./pages/HomePage";
+import Home from "./pages/Home";
+import Room from "./pages/Room";
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
 import SettingsPage from "./pages/SettingsPage";
@@ -43,6 +45,8 @@ const App = () => {
         <Route path="/login" element={!authUser ? <LoginPage /> : <Navigate to="/" />} />
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/profile" element={authUser ? <ProfilePage /> : <Navigate to="/login" />} />
+        <Route path="/vhome" element={<Home />} />
+        <Route path="/room/:roomId" element={<Room />} />
       </Routes>
 
       <Toaster />
