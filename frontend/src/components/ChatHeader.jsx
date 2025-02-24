@@ -1,7 +1,6 @@
 import { X } from "lucide-react";
 import { useAuthStore } from "../store/useAuthStore";
 import { useChatStore } from "../store/useChatStore";
-import { Link } from "react-router-dom";
 
 
 const ChatHeader = () => {
@@ -28,19 +27,15 @@ const ChatHeader = () => {
           </div>
         </div>
         {/* video call button */}
-        <Link to="/vhome" className="link link-primary">
-            <button >
+        <button >
           
-              <PhoneCall/>
-            </button>
-        </Link>
+          <PhoneCall/>
+        </button>
         {/* video call button */}
-        <Link to="/vhome" className="link link-primary">
-            <button >
-              <Video />
+        <button >
+          <Video />
           
-            </button>
-        </Link>
+        </button>
 
         {/* Close button */}
         <button onClick={() => setSelectedUser(null)}>
